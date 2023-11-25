@@ -12,9 +12,13 @@ namespace Test
 {
     public partial class Department : Form
     {
+        Functions Con;
         public Department()
         {
             InitializeComponent();
+            Con = new Functions();
+            ShowDepartments();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -36,10 +40,36 @@ namespace Test
         {
 
         }
+        private void ShowDepartments()
+        {
+            string Query = "Select * from DepartmentTbl";
+            DepList.DataSource = Con.GetData(Query);
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if(DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data at Department!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "insert into DepartmentTbl values('{0}')";
+                    Query = string.Format(Query,DepNameTb.Text);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Added!!!");
+                    DepNameTb.Text = "";
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
@@ -99,7 +129,7 @@ namespace Test
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+           
         }
 
         private void label6_Click(object sender, EventArgs e)
