@@ -191,7 +191,28 @@ namespace Test
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data at Department!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "Delete from DepartmentTbl where DepId = {0}";
+                    Query = string.Format(Query,Key);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Deleted!!!");
+                    DepNameTb.Text = "";
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
