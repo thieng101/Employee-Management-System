@@ -48,6 +48,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Delete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DepList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -267,12 +268,28 @@
             this.pictureBox5.TabIndex = 58;
             this.pictureBox5.TabStop = false;
             // 
+            // Delete
+            // 
+            this.Delete.BackColor = System.Drawing.Color.Turquoise;
+            this.Delete.FlatAppearance.BorderSize = 0;
+            this.Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.ForeColor = System.Drawing.Color.Black;
+            this.Delete.Location = new System.Drawing.Point(152, 580);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(174, 55);
+            this.Delete.TabIndex = 60;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = false;
+            this.Delete.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1417, 880);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label7);
@@ -332,5 +349,6 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button Delete;
     }
 }

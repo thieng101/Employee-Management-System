@@ -39,7 +39,28 @@ namespace Test
         
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (DepNameTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data at Department!!");
+                }
+                else
+                {
+                    string Dep = DepNameTb.Text;
+                    string Query = "Update DepartmentTbl  set DepName = '{0}' where DepId = {1}";
+                    Query = string.Format(Query, DepNameTb.Text,Key);
+                    Con.SetData(Query);
+                    ShowDepartments();
+                    MessageBox.Show("Department Updated!!!");
+                    DepNameTb.Text = "";
 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void ShowDepartments()
         {
@@ -58,7 +79,7 @@ namespace Test
                 else
                 {
                     string Dep = DepNameTb.Text;
-                    string Query = "insert into DepartmentTbl values('{0}')";
+                    string Query = "Insert into DepartmentTbl values('{0}')";
                     Query = string.Format(Query,DepNameTb.Text);
                     Con.SetData(Query);
                     ShowDepartments();
@@ -164,6 +185,11 @@ namespace Test
         }
 
         private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }
