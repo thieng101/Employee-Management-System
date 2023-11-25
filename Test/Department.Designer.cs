@@ -66,6 +66,7 @@
             this.DepList.Name = "DepList";
             this.DepList.RowHeadersWidth = 51;
             this.DepList.RowTemplate.Height = 24;
+            this.DepList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DepList.Size = new System.Drawing.Size(907, 487);
             this.DepList.TabIndex = 50;
             this.DepList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
