@@ -29,7 +29,28 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if(UNameTb.Text == "" || PasswordTb.Text == "")
+            {
+                MessageBox.Show("Missing Data!!");
+            }
+            else if(UNameTb.Text == "Admin" && PasswordTb.Text == "Password") //how to create an admid?
+            {
+                Employees obj = new Employees();
+                obj.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong UserName or Password!!!");
+                UNameTb.Text = "";
+                PasswordTb.Text = "";
+            }
+        }
 
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            UNameTb.Text = "";
+            PasswordTb.Text = "";
         }
     }
 }

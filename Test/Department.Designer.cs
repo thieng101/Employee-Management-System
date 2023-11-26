@@ -44,9 +44,9 @@
             this.EmpLbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.SalaryLbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.LogoutLbl = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.DeleteBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DepList)).BeginInit();
@@ -229,15 +229,16 @@
             this.pictureBox3.TabIndex = 54;
             this.pictureBox3.TabStop = false;
             // 
-            // label7
+            // SalaryLbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(831, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 24);
-            this.label7.TabIndex = 57;
-            this.label7.Text = "Salary";
+            this.SalaryLbl.AutoSize = true;
+            this.SalaryLbl.ForeColor = System.Drawing.Color.Teal;
+            this.SalaryLbl.Location = new System.Drawing.Point(831, 108);
+            this.SalaryLbl.Name = "SalaryLbl";
+            this.SalaryLbl.Size = new System.Drawing.Size(65, 24);
+            this.SalaryLbl.TabIndex = 57;
+            this.SalaryLbl.Text = "Salary";
+            this.SalaryLbl.Click += new System.EventHandler(this.SalaryLbl_Click);
             // 
             // pictureBox4
             // 
@@ -249,15 +250,16 @@
             this.pictureBox4.TabIndex = 56;
             this.pictureBox4.TabStop = false;
             // 
-            // label8
+            // LogoutLbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(985, 108);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 24);
-            this.label8.TabIndex = 59;
-            this.label8.Text = "Logout";
+            this.LogoutLbl.AutoSize = true;
+            this.LogoutLbl.ForeColor = System.Drawing.Color.Teal;
+            this.LogoutLbl.Location = new System.Drawing.Point(985, 108);
+            this.LogoutLbl.Name = "LogoutLbl";
+            this.LogoutLbl.Size = new System.Drawing.Size(73, 24);
+            this.LogoutLbl.TabIndex = 59;
+            this.LogoutLbl.Text = "Logout";
+            this.LogoutLbl.Click += new System.EventHandler(this.LogoutLbl_Click);
             // 
             // pictureBox5
             // 
@@ -291,9 +293,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1417, 880);
             this.Controls.Add(this.DeleteBtn);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.LogoutLbl);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.SalaryLbl);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
@@ -346,9 +348,9 @@
         private System.Windows.Forms.Label EmpLbl;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label SalaryLbl;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LogoutLbl;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button DeleteBtn;
     }

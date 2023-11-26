@@ -57,6 +57,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.EmployeeList = new System.Windows.Forms.DataGridView();
+            this.DeleteBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -241,6 +242,7 @@
             this.UpdateBtn.TabIndex = 27;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // JDateTb
             // 
@@ -272,6 +274,7 @@
             this.label9.Size = new System.Drawing.Size(73, 24);
             this.label9.TabIndex = 67;
             this.label9.Text = "Logout";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // pictureBox5
             // 
@@ -355,6 +358,22 @@
             this.EmployeeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeList.Size = new System.Drawing.Size(907, 487);
             this.EmployeeList.TabIndex = 68;
+            this.EmployeeList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeList_CellContentClick);
+            // 
+            // DeleteBtn
+            // 
+            this.DeleteBtn.BackColor = System.Drawing.Color.Red;
+            this.DeleteBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteBtn.Location = new System.Drawing.Point(894, 768);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(174, 55);
+            this.DeleteBtn.TabIndex = 69;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // Employees
             // 
@@ -362,6 +381,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1417, 880);
+            this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EmployeeList);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox5);
@@ -438,5 +458,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView EmployeeList;
+        private System.Windows.Forms.Button DeleteBtn;
     }
 }

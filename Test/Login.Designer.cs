@@ -33,17 +33,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.UNameTb = new System.Windows.Forms.TextBox();
+            this.PasswordTb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LoginBtn = new System.Windows.Forms.Button();
+            this.ResetBtn = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -82,21 +89,22 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "User Name";
             // 
-            // textBox1
+            // UNameTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(377, 199);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(403, 38);
-            this.textBox1.TabIndex = 3;
+            this.UNameTb.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UNameTb.Location = new System.Drawing.Point(377, 199);
+            this.UNameTb.Name = "UNameTb";
+            this.UNameTb.Size = new System.Drawing.Size(403, 38);
+            this.UNameTb.TabIndex = 3;
             // 
-            // textBox2
+            // PasswordTb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(381, 310);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(403, 38);
-            this.textBox2.TabIndex = 4;
+            this.PasswordTb.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTb.Location = new System.Drawing.Point(381, 310);
+            this.PasswordTb.Name = "PasswordTb";
+            this.PasswordTb.PasswordChar = '*';
+            this.PasswordTb.Size = new System.Drawing.Size(403, 38);
+            this.PasswordTb.TabIndex = 4;
             // 
             // label3
             // 
@@ -109,29 +117,63 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Password";
             // 
-            // button1
+            // LoginBtn
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Teal;
-            this.button1.Location = new System.Drawing.Point(500, 372);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 40);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "LOGIN";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.ForeColor = System.Drawing.Color.Teal;
+            this.LoginBtn.Location = new System.Drawing.Point(500, 372);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.Size = new System.Drawing.Size(180, 40);
+            this.LoginBtn.TabIndex = 7;
+            this.LoginBtn.Text = "LOGIN";
+            this.LoginBtn.UseVisualStyleBackColor = false;
+            this.LoginBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // ResetBtn
+            // 
+            this.ResetBtn.AutoSize = true;
+            this.ResetBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetBtn.ForeColor = System.Drawing.Color.Teal;
+            this.ResetBtn.Location = new System.Drawing.Point(564, 428);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(60, 24);
+            this.ResetBtn.TabIndex = 8;
+            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(564, 428);
+            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(83, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 24);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Reset";
+            this.label4.Size = new System.Drawing.Size(81, 24);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "C#.NET";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(35, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(221, 24);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Dev by Hong T. Nguyen";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(69, 171);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 24);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "SQL Server";
             // 
             // Login
             // 
@@ -139,11 +181,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(897, 471);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ResetBtn);
+            this.Controls.Add(this.LoginBtn);
+            this.Controls.Add(this.PasswordTb);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.UNameTb);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -154,6 +196,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Login_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,10 +210,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox UNameTb;
+        private System.Windows.Forms.TextBox PasswordTb;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Label ResetBtn;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
     }
 }
