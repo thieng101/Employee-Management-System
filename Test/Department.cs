@@ -21,6 +21,13 @@ namespace Test
 
         }
 
+        private void ShowDepartments()
+        {
+            string Query = "Select * from DepartmentTbl";
+            DepList.DataSource = Con.GetData(Query);
+
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -62,12 +69,7 @@ namespace Test
                 MessageBox.Show(ex.Message);
             }
         }
-        private void ShowDepartments()
-        {
-            string Query = "Select * from DepartmentTbl";
-            DepList.DataSource = Con.GetData(Query);
-
-        }
+        
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -213,6 +215,14 @@ namespace Test
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void EmpLbl_Click(object sender, EventArgs e)
+        {
+            Employees Obj = new Employees();
+            Obj.Show();
+            this.Hide();
+  
         }
     }
 }

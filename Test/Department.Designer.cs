@@ -41,7 +41,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.EmpLbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@
             this.DepList.BackgroundColor = System.Drawing.Color.White;
             this.DepList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DepList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DepList.Location = new System.Drawing.Point(498, 336);
+            this.DepList.Location = new System.Drawing.Point(486, 295);
             this.DepList.Name = "DepList";
             this.DepList.RowHeadersWidth = 51;
             this.DepList.RowTemplate.Height = 24;
@@ -79,7 +79,7 @@
             this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditBtn.ForeColor = System.Drawing.Color.Black;
-            this.EditBtn.Location = new System.Drawing.Point(258, 477);
+            this.EditBtn.Location = new System.Drawing.Point(247, 379);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(174, 55);
             this.EditBtn.TabIndex = 47;
@@ -94,7 +94,7 @@
             this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.ForeColor = System.Drawing.Color.White;
-            this.AddBtn.Location = new System.Drawing.Point(33, 477);
+            this.AddBtn.Location = new System.Drawing.Point(33, 379);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(174, 55);
             this.AddBtn.TabIndex = 46;
@@ -115,7 +115,7 @@
             // DepNameTb
             // 
             this.DepNameTb.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepNameTb.Location = new System.Drawing.Point(29, 336);
+            this.DepNameTb.Location = new System.Drawing.Point(33, 291);
             this.DepNameTb.Name = "DepNameTb";
             this.DepNameTb.Size = new System.Drawing.Size(403, 38);
             this.DepNameTb.TabIndex = 35;
@@ -125,7 +125,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(25, 308);
+            this.label3.Location = new System.Drawing.Point(31, 264);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(176, 24);
             this.label3.TabIndex = 36;
@@ -135,7 +135,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(152, 209);
+            this.pictureBox1.Location = new System.Drawing.Point(172, 160);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 83);
             this.pictureBox1.TabIndex = 34;
@@ -180,7 +180,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(855, 268);
+            this.label4.Location = new System.Drawing.Point(822, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 24);
             this.label4.TabIndex = 51;
@@ -197,15 +197,16 @@
             this.pictureBox2.TabIndex = 52;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
+            // EmpLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(439, 108);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 24);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "Employee";
+            this.EmpLbl.AutoSize = true;
+            this.EmpLbl.ForeColor = System.Drawing.Color.Teal;
+            this.EmpLbl.Location = new System.Drawing.Point(439, 108);
+            this.EmpLbl.Name = "EmpLbl";
+            this.EmpLbl.Size = new System.Drawing.Size(99, 24);
+            this.EmpLbl.TabIndex = 53;
+            this.EmpLbl.Text = "Employee";
+            this.EmpLbl.Click += new System.EventHandler(this.EmpLbl_Click);
             // 
             // label6
             // 
@@ -275,7 +276,7 @@
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBtn.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(152, 580);
+            this.DeleteBtn.Location = new System.Drawing.Point(126, 486);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(174, 55);
             this.DeleteBtn.TabIndex = 60;
@@ -296,7 +297,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.EmpLbl);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.DepList);
@@ -342,7 +343,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label EmpLbl;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label7;
