@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label DepLbl;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Salaries));
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
@@ -43,16 +44,16 @@
             this.EmpTb = new System.Windows.Forms.ComboBox();
             this.DaysTb = new System.Windows.Forms.TextBox();
             this.PeriodTb = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
+            this.LogoutLbl = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.EmpLbl = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SalaryList = new System.Windows.Forms.DataGridView();
             this.AmountTb = new System.Windows.Forms.TextBox();
+            DepLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -61,6 +62,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalaryList)).BeginInit();
             this.SuspendLayout();
+            // 
+            // DepLbl
+            // 
+            DepLbl.AutoSize = true;
+            DepLbl.ForeColor = System.Drawing.Color.Teal;
+            DepLbl.Location = new System.Drawing.Point(623, 108);
+            DepLbl.Name = "DepLbl";
+            DepLbl.Size = new System.Drawing.Size(127, 24);
+            DepLbl.TabIndex = 63;
+            DepLbl.Text = "Departments";
+            DepLbl.Click += new System.EventHandler(this.DepLbl_Click);
             // 
             // UpdateBtn
             // 
@@ -75,6 +87,7 @@
             this.UpdateBtn.TabIndex = 47;
             this.UpdateBtn.Text = "Update";
             this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // AddBtn
             // 
@@ -126,9 +139,10 @@
             this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(39, 273);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 24);
+            this.label3.Size = new System.Drawing.Size(157, 24);
             this.label3.TabIndex = 36;
-            this.label3.Text = "Employee";
+            this.label3.Text = "Employee Name";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // pictureBox1
             // 
@@ -207,17 +221,18 @@
             this.PeriodTb.Name = "PeriodTb";
             this.PeriodTb.Size = new System.Drawing.Size(403, 30);
             this.PeriodTb.TabIndex = 53;
+            this.PeriodTb.ValueChanged += new System.EventHandler(this.PeriodTb_ValueChanged);
             // 
-            // label8
+            // LogoutLbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(986, 108);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 24);
-            this.label8.TabIndex = 67;
-            this.label8.Text = "Logout";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.LogoutLbl.AutoSize = true;
+            this.LogoutLbl.ForeColor = System.Drawing.Color.Teal;
+            this.LogoutLbl.Location = new System.Drawing.Point(986, 108);
+            this.LogoutLbl.Name = "LogoutLbl";
+            this.LogoutLbl.Size = new System.Drawing.Size(73, 24);
+            this.LogoutLbl.TabIndex = 67;
+            this.LogoutLbl.Text = "Logout";
+            this.LogoutLbl.Click += new System.EventHandler(this.label8_Click);
             // 
             // pictureBox5
             // 
@@ -249,16 +264,6 @@
             this.pictureBox4.TabIndex = 64;
             this.pictureBox4.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(623, 108);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 24);
-            this.label9.TabIndex = 63;
-            this.label9.Text = "Departments";
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -269,15 +274,16 @@
             this.pictureBox3.TabIndex = 62;
             this.pictureBox3.TabStop = false;
             // 
-            // label10
+            // EmpLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(440, 108);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 24);
-            this.label10.TabIndex = 61;
-            this.label10.Text = "Employee";
+            this.EmpLbl.AutoSize = true;
+            this.EmpLbl.ForeColor = System.Drawing.Color.Teal;
+            this.EmpLbl.Location = new System.Drawing.Point(440, 108);
+            this.EmpLbl.Name = "EmpLbl";
+            this.EmpLbl.Size = new System.Drawing.Size(99, 24);
+            this.EmpLbl.TabIndex = 61;
+            this.EmpLbl.Text = "Employee";
+            this.EmpLbl.Click += new System.EventHandler(this.EmpLbl_Click);
             // 
             // pictureBox2
             // 
@@ -291,11 +297,13 @@
             // 
             // SalaryList
             // 
+            this.SalaryList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SalaryList.BackgroundColor = System.Drawing.Color.White;
             this.SalaryList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SalaryList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SalaryList.Location = new System.Drawing.Point(498, 254);
             this.SalaryList.Name = "SalaryList";
+            this.SalaryList.ReadOnly = true;
             this.SalaryList.RowHeadersWidth = 51;
             this.SalaryList.RowTemplate.Height = 24;
             this.SalaryList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -323,13 +331,13 @@
             this.ClientSize = new System.Drawing.Size(1417, 880);
             this.Controls.Add(this.AmountTb);
             this.Controls.Add(this.SalaryList);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.LogoutLbl);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(DepLbl);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.EmpLbl);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.PeriodTb);
             this.Controls.Add(this.DaysTb);
@@ -378,13 +386,12 @@
         private System.Windows.Forms.ComboBox EmpTb;
         private System.Windows.Forms.TextBox DaysTb;
         private System.Windows.Forms.DateTimePicker PeriodTb;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LogoutLbl;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label EmpLbl;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridView SalaryList;
         private System.Windows.Forms.TextBox AmountTb;

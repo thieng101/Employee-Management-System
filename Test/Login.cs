@@ -52,5 +52,10 @@ namespace Test
             UNameTb.Text = "";
             PasswordTb.Text = "";
         }
+
+        private void UNameTb_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

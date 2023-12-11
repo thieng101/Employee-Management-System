@@ -43,7 +43,7 @@ namespace Test
             
             if(DaysTb.Text == "")
             {
-                AmountTb.Text = "$" + (d * DSal); //NOTE:Use convert integer here
+                AmountTb.Text = "$" +  DSal; //NOTE:Use convert integer here
             }else if(Convert.ToInt32(DaysTb.Text) > 31)
             {
                 MessageBox.Show("Days Can not Be Greater Than 31");
@@ -68,9 +68,22 @@ namespace Test
 
         }
 
+        int Key = 0;
         private void SalaryList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            EmpTb.SelectedValue = SalaryList.SelectedRows[0].Cells[1].Value.ToString();
+            DaysTb.Text = SalaryList.SelectedRows[0].Cells[2].Value.ToString();
+            PeriodTb.Text = SalaryList.SelectedRows[0].Cells[3].Value.ToString();
+            AmountTb.Text = SalaryList.SelectedRows[0].Cells[4].Value.ToString();
 
+            if (EmpTb.SelectedIndex == -1)
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(SalaryList.SelectedRows[0].Cells[1].Value.ToString());
+            }
         }
 
         private void EmpTb_SelectionChangeCommitted(object sender, EventArgs e)
@@ -116,6 +129,64 @@ namespace Test
             Login Obj = new Login();
             Obj.Show();
             this.Hide();
+        }
+
+        private void EmpLbl_Click(object sender, EventArgs e)
+        {
+            Employees Obj = new Employees();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void DepLbl_Click(object sender, EventArgs e)
+        {
+            Department Obj = new Department();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (EmpTb.SelectedIndex == -1 || DaysTb.Text == "" || PeriodTb.Text == "")
+                {
+                    MessageBox.Show("Missing Data!!!");
+                }
+                else
+                {
+                    GetSalary();
+                    Period = PeriodTb.Value.ToString("MM-yyyy");
+                    int Amount = DSal * Convert.ToInt32(DaysTb.Text);
+                    int Days = Convert.ToInt32(DaysTb.Text);
+
+                    string Query = "Update SalaryTbl set Attendance = {0}, Period = '{1}', Amount = {2}, PayDate = '{3}' where Employee = {4}";
+                    Query = string.Format(Query,Days, Period, Amount, DateTime.Today.Date, Key);
+                    Con.SetData(Query);
+                    ShowSalary();
+                    MessageBox.Show("Salary Updated!!!");
+                    DaysTb.Text = "";
+                    AmountTb.Text = "";
+                    EmpTb.SelectedIndex = -1;
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void PeriodTb_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

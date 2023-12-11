@@ -175,7 +175,7 @@ namespace Test
             JDateTb.Text = EmployeeList.SelectedRows[0].Cells[5].Value.ToString();
             DailySalTb.Text = EmployeeList.SelectedRows[0].Cells[6].Value.ToString();
             if (EmpNameTb.Text == "")
-            {
+            {   
                 Key = 0;
             }
             else
@@ -187,6 +187,25 @@ namespace Test
         private void label9_Click(object sender, EventArgs e)
         {
             Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DepLbl_Click(object sender, EventArgs e)
+        {
+            Department Obj = new Department();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            Salaries Obj = new Salaries();
             Obj.Show();
             this.Hide();
         }

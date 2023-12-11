@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.EmpLbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,11 +59,13 @@
             // 
             // DepList
             // 
+            this.DepList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DepList.BackgroundColor = System.Drawing.Color.White;
             this.DepList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DepList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DepList.Location = new System.Drawing.Point(486, 295);
             this.DepList.Name = "DepList";
+            this.DepList.ReadOnly = true;
             this.DepList.RowHeadersWidth = 51;
             this.DepList.RowTemplate.Height = 24;
             this.DepList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -175,17 +176,6 @@
             this.panel1.Size = new System.Drawing.Size(1417, 88);
             this.panel1.TabIndex = 32;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(822, 264);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 24);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "Department List";
-            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // pictureBox2
             // 
@@ -301,7 +291,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.EmpLbl);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.DepList);
             this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.AddBtn);
@@ -343,7 +332,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label EmpLbl;
         private System.Windows.Forms.Label label6;

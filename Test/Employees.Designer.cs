@@ -48,11 +48,11 @@
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.JDateTb = new System.Windows.Forms.DateTimePicker();
             this.DOBTb = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
+            this.LogoutLbl = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.SalaryLbl = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.DepLbl = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -265,16 +265,16 @@
             this.DOBTb.TabIndex = 30;
             this.DOBTb.ValueChanged += new System.EventHandler(this.DOBTb_ValueChanged);
             // 
-            // label9
+            // LogoutLbl
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(995, 107);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 24);
-            this.label9.TabIndex = 67;
-            this.label9.Text = "Logout";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
+            this.LogoutLbl.AutoSize = true;
+            this.LogoutLbl.ForeColor = System.Drawing.Color.Teal;
+            this.LogoutLbl.Location = new System.Drawing.Point(995, 107);
+            this.LogoutLbl.Name = "LogoutLbl";
+            this.LogoutLbl.Size = new System.Drawing.Size(73, 24);
+            this.LogoutLbl.TabIndex = 67;
+            this.LogoutLbl.Text = "Logout";
+            this.LogoutLbl.Click += new System.EventHandler(this.label9_Click);
             // 
             // pictureBox5
             // 
@@ -286,15 +286,16 @@
             this.pictureBox5.TabIndex = 66;
             this.pictureBox5.TabStop = false;
             // 
-            // label10
+            // SalaryLbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(841, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 24);
-            this.label10.TabIndex = 65;
-            this.label10.Text = "Salary";
+            this.SalaryLbl.AutoSize = true;
+            this.SalaryLbl.ForeColor = System.Drawing.Color.Teal;
+            this.SalaryLbl.Location = new System.Drawing.Point(841, 107);
+            this.SalaryLbl.Name = "SalaryLbl";
+            this.SalaryLbl.Size = new System.Drawing.Size(65, 24);
+            this.SalaryLbl.TabIndex = 65;
+            this.SalaryLbl.Text = "Salary";
+            this.SalaryLbl.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBox4
             // 
@@ -306,15 +307,16 @@
             this.pictureBox4.TabIndex = 64;
             this.pictureBox4.TabStop = false;
             // 
-            // label11
+            // DepLbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.Teal;
-            this.label11.Location = new System.Drawing.Point(632, 107);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 24);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "Departments";
+            this.DepLbl.AutoSize = true;
+            this.DepLbl.ForeColor = System.Drawing.Color.Teal;
+            this.DepLbl.Location = new System.Drawing.Point(632, 107);
+            this.DepLbl.Name = "DepLbl";
+            this.DepLbl.Size = new System.Drawing.Size(127, 24);
+            this.DepLbl.TabIndex = 63;
+            this.DepLbl.Text = "Departments";
+            this.DepLbl.Click += new System.EventHandler(this.DepLbl_Click);
             // 
             // pictureBox3
             // 
@@ -335,6 +337,7 @@
             this.label12.Size = new System.Drawing.Size(99, 24);
             this.label12.TabIndex = 61;
             this.label12.Text = "Employee";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // pictureBox2
             // 
@@ -348,12 +351,14 @@
             // 
             // EmployeeList
             // 
+            this.EmployeeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.EmployeeList.BackgroundColor = System.Drawing.Color.White;
             this.EmployeeList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmployeeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeList.ColumnHeadersHeight = 29;
             this.EmployeeList.Location = new System.Drawing.Point(498, 249);
             this.EmployeeList.Name = "EmployeeList";
-            this.EmployeeList.RowHeadersWidth = 51;
+            this.EmployeeList.ReadOnly = true;
+            this.EmployeeList.RowHeadersWidth = 60;
             this.EmployeeList.RowTemplate.Height = 24;
             this.EmployeeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeList.Size = new System.Drawing.Size(907, 487);
@@ -383,11 +388,11 @@
             this.ClientSize = new System.Drawing.Size(1417, 880);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EmployeeList);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.LogoutLbl);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.SalaryLbl);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.DepLbl);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox2);
@@ -449,11 +454,11 @@
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.DateTimePicker JDateTb;
         private System.Windows.Forms.DateTimePicker DOBTb;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label LogoutLbl;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label SalaryLbl;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label DepLbl;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox2;
