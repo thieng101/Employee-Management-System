@@ -10,7 +10,6 @@ An employee management system built in .NET framework using C# and SQL, develope
 - [Setup](#setup)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
