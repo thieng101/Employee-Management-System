@@ -18,6 +18,7 @@ namespace Test
 
         public Functions()
         {
+            //replace the Data Source with your local path where you store the sql file (called EmpDb2.mdf)
             ConStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\amyng\OneDrive\Documents\EmpDb2.mdf;Integrated Security=True;Connect Timeout=30";
             Con = new SqlConnection(ConStr);
             Cmd = new SqlCommand();
