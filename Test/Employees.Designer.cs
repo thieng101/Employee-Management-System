@@ -74,7 +74,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1417, 88);
+            this.panel1.Size = new System.Drawing.Size(1435, 88);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -99,6 +99,7 @@
             this.label2.Size = new System.Drawing.Size(291, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "Manage Employees";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -126,6 +127,7 @@
             this.EmpNameTb.Name = "EmpNameTb";
             this.EmpNameTb.Size = new System.Drawing.Size(403, 38);
             this.EmpNameTb.TabIndex = 6;
+            this.EmpNameTb.TextChanged += new System.EventHandler(this.EmpNameTb_TextChanged);
             // 
             // label4
             // 
@@ -175,6 +177,7 @@
             this.label7.Size = new System.Drawing.Size(211, 24);
             this.label7.TabIndex = 17;
             this.label7.Text = "Employee Daily Salary";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -190,9 +193,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 841);
+            this.panel2.Location = new System.Drawing.Point(0, 888);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1417, 39);
+            this.panel2.Size = new System.Drawing.Size(1435, 39);
             this.panel2.TabIndex = 18;
             // 
             // GenCh
@@ -385,7 +388,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1417, 880);
+            this.ClientSize = new System.Drawing.Size(1435, 927);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.EmployeeList);
             this.Controls.Add(this.LogoutLbl);
@@ -415,7 +418,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Employees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
